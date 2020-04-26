@@ -1,8 +1,9 @@
-package bkp.com.ecommerce2;
+package bkp.com.ecommerce2.Admin;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import bkp.com.ecommerce2.R;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -186,7 +187,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
 
 
 
-                    Intent intent = new Intent(AdminAddNewProductActivity.this,AdminCategoryActivity.class);
+                    Intent intent = new Intent(AdminAddNewProductActivity.this, AdminCategoryActivity.class);
                     startActivity(intent);
 
                     loadingBar.dismiss();
