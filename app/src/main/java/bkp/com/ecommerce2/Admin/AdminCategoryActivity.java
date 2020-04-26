@@ -1,8 +1,8 @@
 package bkp.com.ecommerce2.Admin;
 
 import androidx.appcompat.app.AppCompatActivity;
-import bkp.com.ecommerce2.HomeActivity;
-import bkp.com.ecommerce2.MainActivity;
+import bkp.com.ecommerce2.Buyers.HomeActivity;
+import bkp.com.ecommerce2.Buyers.MainActivity;
 import bkp.com.ecommerce2.R;
 
 import android.content.Intent;

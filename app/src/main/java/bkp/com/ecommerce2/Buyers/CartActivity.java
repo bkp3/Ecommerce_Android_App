@@ -1,4 +1,4 @@
-package bkp.com.ecommerce2;
+package bkp.com.ecommerce2.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import bkp.com.ecommerce2.Prevalent.Prevalent;
+import bkp.com.ecommerce2.R;
 import bkp.com.ecommerce2.ViewFolder.CartViewHolder;
 import bkp.com.ecommerce2.model.Cart;
 
@@ -104,7 +105,7 @@ public class CartActivity extends AppCompatActivity {
 
                                 if(i == 0){
 
-                                    Intent intent =new Intent(CartActivity.this,ProductDetailsActivity.class);
+                                    Intent intent =new Intent(CartActivity.this, ProductDetailsActivity.class);
                                     intent.putExtra("pid",model.getPid());
                                     startActivity(intent);
 
@@ -123,7 +124,7 @@ public class CartActivity extends AppCompatActivity {
                                                     if(task.isSuccessful()){
                                                         Toast.makeText(CartActivity.this, "item removed successfully.", Toast.LENGTH_SHORT).show();
 
-                                                        Intent intent = new Intent(CartActivity.this,HomeActivity.class);
+                                                        Intent intent = new Intent(CartActivity.this, HomeActivity.class);
                                                         startActivity(intent);
                                                     }
                                                 }

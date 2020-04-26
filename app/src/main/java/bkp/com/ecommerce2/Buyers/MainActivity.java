@@ -1,12 +1,12 @@
-package bkp.com.ecommerce2;
+package bkp.com.ecommerce2.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import bkp.com.ecommerce2.Prevalent.Prevalent;
+import bkp.com.ecommerce2.R;
 import bkp.com.ecommerce2.model.Users;
 import io.paperdb.Paper;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this,"Please wait, You are already logged in...",Toast.LENGTH_LONG).show();
                             loadingBar.dismiss();
 
-                            Intent intent = new Intent(MainActivity.this,HomeActivity.class);
+                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                             Prevalent.currentOnlineUser = usersData;
                             startActivity(intent);
                         }else{

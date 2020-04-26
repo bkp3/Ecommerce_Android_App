@@ -1,9 +1,10 @@
-package bkp.com.ecommerce2;
+package bkp.com.ecommerce2.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import bkp.com.ecommerce2.R;
 import bkp.com.ecommerce2.ViewFolder.ProductViewHolder;
 import bkp.com.ecommerce2.model.Products;
 
@@ -69,7 +70,7 @@ public class SearchProductsActivity extends AppCompatActivity {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(SearchProductsActivity.this,ProductDetailsActivity.class);
+                        Intent intent = new Intent(SearchProductsActivity.this, ProductDetailsActivity.class);
                         intent.putExtra("pid",model.getPid());
                         startActivity(intent);
 

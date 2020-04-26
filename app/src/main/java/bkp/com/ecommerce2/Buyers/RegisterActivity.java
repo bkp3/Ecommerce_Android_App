@@ -1,9 +1,9 @@
-package bkp.com.ecommerce2;
+package bkp.com.ecommerce2.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import bkp.com.ecommerce2.R;
 
-import android.app.IntentService;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -108,7 +107,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 Toast.makeText(RegisterActivity.this,"Congratulations your account has been created...",Toast.LENGTH_LONG).show();
                                 loadingBar.dismiss();
 
-                                Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
+                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                 startActivity(intent);
 
 
@@ -127,7 +126,7 @@ public class RegisterActivity extends AppCompatActivity {
                     loadingBar.dismiss();
                     Toast.makeText(RegisterActivity.this,"Please try again using another number",Toast.LENGTH_LONG).show();
 
-                    Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
+                    Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                     startActivity(intent);
 
                 }

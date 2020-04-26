@@ -1,4 +1,4 @@
-package bkp.com.ecommerce2;
+package bkp.com.ecommerce2.Buyers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +27,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import bkp.com.ecommerce2.Admin.AdminMaintainProductsActivity;
 import bkp.com.ecommerce2.Prevalent.Prevalent;
+import bkp.com.ecommerce2.R;
 import bkp.com.ecommerce2.ViewFolder.ProductViewHolder;
 import bkp.com.ecommerce2.model.Products;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -132,7 +133,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                             startActivity(intent);
 
                         }else{
-                            Intent intent = new Intent(HomeActivity.this,ProductDetailsActivity.class);
+                            Intent intent = new Intent(HomeActivity.this, ProductDetailsActivity.class);
                             intent.putExtra("pid",model.getPid());
                             startActivity(intent);
                         }
@@ -216,14 +217,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         }else if(id == R.id.nav_settings){
             if(!type.equals("Admin")){
-                Intent intent = new Intent(HomeActivity.this,SettingsActivity.class);
+                Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
                 startActivity(intent);
             }
 
         }else if(id == R.id.nav_logout){
             if(!type.equals("Admin")){
                 Paper.book().destroy();
-                Intent intent = new Intent(HomeActivity.this,MainActivity.class);
+                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();

@@ -1,8 +1,9 @@
-package bkp.com.ecommerce2;
+package bkp.com.ecommerce2.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import bkp.com.ecommerce2.Prevalent.Prevalent;
+import bkp.com.ecommerce2.R;
 import bkp.com.ecommerce2.model.Products;
 
 import android.content.Intent;
@@ -16,7 +17,6 @@ import android.widget.Toast;
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -113,7 +113,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 Toast.makeText(ProductDetailsActivity.this, "Added to cart list.", Toast.LENGTH_SHORT).show();
 
-                                Intent intent = new Intent(ProductDetailsActivity.this,HomeActivity.class);
+                                Intent intent = new Intent(ProductDetailsActivity.this, HomeActivity.class);
                                 startActivity(intent);
                             }
                         }

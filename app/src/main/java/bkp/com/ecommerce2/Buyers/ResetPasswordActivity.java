@@ -1,14 +1,14 @@
-package bkp.com.ecommerce2;
+package bkp.com.ecommerce2.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import bkp.com.ecommerce2.Prevalent.Prevalent;
+import bkp.com.ecommerce2.R;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -108,7 +108,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
                     if (task.isSuccessful()){
                         Toast.makeText(ResetPasswordActivity.this, "You have answer security questions successfully.", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(ResetPasswordActivity.this,HomeActivity.class);
+                        Intent intent = new Intent(ResetPasswordActivity.this, HomeActivity.class);
                         startActivity(intent);
                     }
                 }

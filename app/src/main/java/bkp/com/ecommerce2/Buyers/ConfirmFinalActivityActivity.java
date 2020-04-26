@@ -1,8 +1,9 @@
-package bkp.com.ecommerce2;
+package bkp.com.ecommerce2.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import bkp.com.ecommerce2.Prevalent.Prevalent;
+import bkp.com.ecommerce2.R;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -102,7 +103,7 @@ public class ConfirmFinalActivityActivity extends AppCompatActivity {
                             if (task.isSuccessful()){
                                 Toast.makeText(ConfirmFinalActivityActivity.this, "your final order has been placed successfully.", Toast.LENGTH_SHORT).show();
 
-                                Intent intent = new Intent(ConfirmFinalActivityActivity.this,HomeActivity.class);
+                                Intent intent = new Intent(ConfirmFinalActivityActivity.this, HomeActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
                                 finish();

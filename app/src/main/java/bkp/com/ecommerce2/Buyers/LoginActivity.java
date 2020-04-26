@@ -1,9 +1,10 @@
-package bkp.com.ecommerce2;
+package bkp.com.ecommerce2.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import bkp.com.ecommerce2.Admin.AdminCategoryActivity;
 import bkp.com.ecommerce2.Prevalent.Prevalent;
+import bkp.com.ecommerce2.R;
 import bkp.com.ecommerce2.model.Users;
 import io.paperdb.Paper;
 
@@ -67,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
         ForgotPasswordLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,ResetPasswordActivity.class);
+                Intent intent = new Intent(LoginActivity.this, ResetPasswordActivity.class);
                 intent.putExtra("check","login");
                 startActivity(intent);
 
@@ -153,7 +154,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                 Toast.makeText(LoginActivity.this,"Logged in successfully...",Toast.LENGTH_LONG).show();
                                 loadingBar.dismiss();
-                                Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                 Prevalent.currentOnlineUser = usersData;
                                 startActivity(intent);
 
