@@ -4,8 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import bkp.com.ecommerce2.Prevalent.Prevalent;
 import bkp.com.ecommerce2.R;
-import bkp.com.ecommerce2.Sellers.SellerHomeActivity;
-import bkp.com.ecommerce2.Sellers.SellerRegistrationActivity;
+
 import bkp.com.ecommerce2.model.Users;
 import io.paperdb.Paper;
 
@@ -46,13 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         Paper.init(this);
 
-        sellerBegin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SellerRegistrationActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,18 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
 
-        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        if(firebaseUser != null){
-            Intent intent = new Intent(MainActivity.this, SellerHomeActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-            finish();
-        }
-    }
 
     private void allowAccess(final String phone, final String password) {
 
